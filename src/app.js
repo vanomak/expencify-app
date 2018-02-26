@@ -13,17 +13,6 @@ import moment from 'moment';
 import getVisibleExpences from './selectors/expences';
 
 const store = configureStore();
-store.dispatch(addExpence({description:'Water bill', amount: 1000, createdAt: moment().subtract(1, 'days').valueOf()}));
-store.dispatch(addExpence({description:'Gas bill', amount: 500, createdAt: moment().subtract(2, 'days').valueOf()}));
-store.dispatch(addExpence({description:'Rent', amount: 1500, createdAt: moment().subtract(3, 'days').valueOf()}));
-//store.dispatch(setTextFilter('bill'));
-
-// setTimeout(() => {
-//     store.dispatch(setTextFilter('gas'));
-// }, 3000);
-
-//console.log(store.getState());
-//console.log(getVisibleExpences(store.getState().expences, store.getState().filters));
 
 const jsx = (
     <Provider store={store}>
