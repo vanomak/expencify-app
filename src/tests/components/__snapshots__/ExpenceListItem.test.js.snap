@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenceListItem correctly with data 1`] = `
+<div>
+  <Link
+    replace={false}
+    to="/edit/2"
+  >
+    <h2>
+      Rent
+    </h2>
+  </Link>
+  <p>
+    100
+     
+    <small>
+      30/12/1969
+    </small>
+  </p>
+</div>
+`;
