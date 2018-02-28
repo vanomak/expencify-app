@@ -11,11 +11,9 @@ exports[`should render ExpenceListItem correctly with data 1`] = `
     </h2>
   </Link>
   <p>
-    100
-     
-    <small>
-      30/12/1969
-    </small>
+    $1.00
+     - 
+    30/12/1969
   </p>
 </div>
 `;
