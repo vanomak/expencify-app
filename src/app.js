@@ -11,6 +11,8 @@ import {setTextFilter} from "./actions/filters";
 import {addExpence} from "./actions/expences";
 import moment from 'moment';
 import getVisibleExpences from './selectors/expences';
+import './firebase/firebase';
+// import './playground/promises';
 
 const store = configureStore();
 
