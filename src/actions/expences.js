@@ -44,6 +44,14 @@ export const editExpence = (id, updates ) => ({
     updates
 });
 
+export const startEditExpence = (id, updates ) => {
+    return (dispatch) => {
+        return db.ref(`expences/${id}`).update(updates).then((snap) => {
+            dispatch(editExpence(id, updates));
+        })
+    };
+};
+
 export const setExpences = (expences) => ({
     type: 'SET_EXPENCES',
     expences
