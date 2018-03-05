@@ -30,6 +30,14 @@ export const removeExpence = ( id ) => ({
     id
 });
 
+export const startRemoveExpence = ( id ) => {
+    return (dispatch) => {
+        return db.ref(`expences/${id}`).remove().then((snap) => {
+            dispatch(removeExpence(id));
+        })
+    }
+};
+
 export const editExpence = (id, updates ) => ({
     type: 'EDIT_EXPENCE',
     id,
