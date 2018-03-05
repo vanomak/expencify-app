@@ -8,6 +8,10 @@ export default (state = expencesReducerDefaultState, action) => {
                 ...state,
                 action.expence
             ];
+        case 'SET_EXPENCES':
+            return [
+                ...action.expences
+            ];
         case 'EDIT_EXPENCE':
             return state.map((expence) => {
                 if (expence.id === action.id) {

@@ -1,5 +1,6 @@
 import expencesReducer from '../../reducers/expences';
 import expences from '../fixtures/expences';
+import {expences2} from '../fixtures/expences';
 import moment from "moment/moment";
 import uuid from "uuid";
 
@@ -73,5 +74,14 @@ test('should not edit expence by unknown id', () => {
     };
     const state = expencesReducer(expences, action);
     expect(state).toEqual([...expences]);
+});
+
+test('should set expences', () => {
+    const action = {
+        type: 'SET_EXPENCES',
+        expences: expences2
+    };
+    const state = expencesReducer(expences, action);
+    expect(state).toEqual([...expences2]);
 });
 
