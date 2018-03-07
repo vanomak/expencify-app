@@ -7,7 +7,6 @@ import {
 import expences from '../fixtures/expences';
 import db from '../../firebase/firebase';
 
-
 const createMockStore = configureMockStore([thunk]);
 
 beforeEach((done) => {
