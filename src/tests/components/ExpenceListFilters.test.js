@@ -56,15 +56,14 @@ test('should sort by amount ExpenceListFilters', () => {
 test('should set start date ExpenceListFilters', () => {
     const startDate = moment(0).add(5, 'days');
     const endDate = moment(0).add(7, 'days');
-    //wrapper.find('#rangePicker').prop('onDatesChange')({startDate, endDate});
-    wrapper.childAt(2).prop('onDatesChange')({startDate, endDate});
+    wrapper.find('withStyles(DateRangePicker)').prop('onDatesChange')({startDate, endDate});
     expect(setStartDate).toHaveBeenLastCalledWith(startDate);
     expect(setEndDate).toHaveBeenLastCalledWith(endDate);
 });
 
 test('should handle focus change ExpenceListFilters', () => {
     const focused = "startDate";
-    wrapper.childAt(2).prop('onFocusChange')(focused);
+    wrapper.find('withStyles(DateRangePicker)').prop('onFocusChange')(focused);
     expect(wrapper.state('calendarFocused')).toBe(focused);
 });
 

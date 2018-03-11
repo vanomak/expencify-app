@@ -5,10 +5,18 @@ import selectExpences from '../selectors/expences';
 
 
 export const ExpenceList = (props) => (
-    <div>
+    <div className="content-container">
+        <div className="list-header">
+            <div className="show-for-mobile">Expenses</div>
+            <div className="show-for-desktop">Expense</div>
+            <div className="show-for-desktop">Amount</div>
+        </div>
+        <div className="list-body">
         {
             props.expences.length === 0 ? (
-                <p>No expences</p>
+                <div className="list-item list-item--message">
+                    <span>No expences</span>
+                </div>
             ) : (
                 props.expences.map((item) => {
                     return (
@@ -17,6 +25,7 @@ export const ExpenceList = (props) => (
                 })
             )
         }
+        </div>
     </div>
 );
 
